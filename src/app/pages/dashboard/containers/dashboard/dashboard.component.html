@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="p-grid">
+
+    <div class="p-col-6">
+      <div class="card">
+        <h5>Mediciones</h5>
+        <p-table [value]="(measurements$ | async)" [paginator]="true" [rows]="5">
+
+          <ng-template pTemplate="header">
+            <tr>
+              <th pSortableColumn="eco2">CO<small>2</small> (ppm) <p-sortIcon field="eco2"></p-sortIcon>
+              </th>
+              <th pSortableColumn="etvoc">Compuestos orgánicos volátiles (ppm) <p-sortIcon field="etvoc"></p-sortIcon>
+              </th>
+              <th pSortableColumn="timestamp">Fecha y hora <p-sortIcon field="timestamp"></p-sortIcon>
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-measurement>
+            <tr>
+              <td>{{measurement.eco2}}</td>
+              <td>{{measurement.etvoc}}</td>
+              <td>{{measurement.timestamp | date : 'dd/MM/yyyy HH:mm:ss a'}}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+
+    <div class="p-col-6">
+      <div class="card">
+        <h5>Mediciones</h5>
+        <p-chart type="doughnut" [data]="data"></p-chart>
+      </div>
+    </div>
+  </div>
+</div>

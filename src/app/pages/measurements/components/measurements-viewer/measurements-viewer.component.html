@@ -1,5 +1,0 @@
-<div *ngFor="let measurement of measurements">
-  <ng-container *ngIf="measurement.data as m">
-    {{m.timestamp * 1000  | date: 'dd/MM/yyyy HH:mm:ss a'}}
-  </ng-container>
-</div>

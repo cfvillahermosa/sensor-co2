@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MeasurementsViewerComponent } from './pages/measurements/components/measurements-viewer/measurements-viewer.component';
+import { DashboardComponent } from './pages/dashboard/containers/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'measurements',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
   },
-  { path: 'measurements', component: MeasurementsViewerComponent },
+  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({

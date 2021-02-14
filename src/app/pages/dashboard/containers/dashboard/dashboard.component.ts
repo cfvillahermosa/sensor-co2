@@ -9,19 +9,7 @@ import { SensorCo2Service } from './../../../../services/sensor-co2.service';
 })
 export class DashboardComponent implements OnInit {
   public measurements$: Observable<any>;
-  data;
-  constructor(private sensorCo2Service: SensorCo2Service) {
-    this.data = {
-      labels: ['A', 'B', 'C'],
-      datasets: [
-        {
-          data: [300, 50, 100],
-          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-          hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-        },
-      ],
-    };
-  }
+  constructor(private sensorCo2Service: SensorCo2Service) {}
 
   ngOnInit(): void {
     this.measurements$ = this.sensorCo2Service.getMeasurements();

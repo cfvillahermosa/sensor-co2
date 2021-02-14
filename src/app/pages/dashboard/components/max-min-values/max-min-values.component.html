@@ -1,0 +1,39 @@
+<div class="p-grid">
+  <div class="p-col-6">
+    <p-card header="Valor Máximo y mínimo de C02 medido hasta la fecha (ppm)">
+      <p-messages severity="error">
+        <ng-template pTemplate>
+          <i class="pi pi-arrow-up"></i>
+          <div class="p-ml-2">{{maxCO2}}</div>
+        </ng-template>
+      </p-messages>
+
+      <p-messages severity="success">
+        <ng-template pTemplate>
+          <i class="pi pi-arrow-down"></i>
+          <div class="p-ml-2">{{minCO2}}</div>
+        </ng-template>
+      </p-messages>
+
+    </p-card>
+
+  </div>
+
+  <div class="p-col-6">
+    <p-card header="Valor Máximo y mínimo de VOC medido hasta la fecha (ppb)">
+      <p-messages severity="error">
+        <ng-template pTemplate>
+          <i class="pi pi-arrow-up"></i>
+          <div class="p-ml-2">{{maxVOC}}</div>
+        </ng-template>
+      </p-messages>
+
+      <p-messages severity="success">
+        <ng-template pTemplate>
+          <i class="pi pi-arrow-down"></i>
+          <div class="p-ml-2">{{minVOC}}</div>
+        </ng-template>
+      </p-messages>
+    </p-card>
+  </div>
+</div>
